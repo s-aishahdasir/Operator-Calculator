@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");
+		
+		double n1 = sc.nextDouble();
+		double n2 = sc.nextDouble();
+		String operation = sc.next();
+		
+		double maths =  0.0;
+		
+	       if (operation.equals("+")) {
+			   maths = n1 + n2 ;
+			   System.out.println(df.format(n1) + " + " + df.format(n2) + " = " + df.format(maths));
+		}  else if (operation.equals("-")) {
+			   maths =  n1 - n2;
+			   System.out.println(df.format(n1) + " - " + df.format(n2) + " = " + df.format(maths));
+		}  else if  (operation.equals("*")) {
+			   maths = n1 * n2;
+			   System.out.println(df.format(n1) + " * " + df.format(n2) + " = " + df.format(maths));
+		}  else if (operation.equals("/")) {
+			   if (n2 == 0) {
+				   System.out.println("Error: Division by zero is not allowed"); }
+				   
+			       else {
+					   maths = n1 / n2;
+					   System.out.println(df.format(n1) + " / " + df.format(n2) + " = " + df.format(maths));
+				   }
+		}  else
+			           System.out.println("Error: Invalid operator.");
+		
+
+	}
+
+}
